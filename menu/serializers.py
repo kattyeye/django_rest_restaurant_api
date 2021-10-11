@@ -4,5 +4,6 @@ from .models import MenuItem
 
 
 class MenuSerializer(serializers.ModelSerializer):
-    model = MenuItem
-    fields = ('id', 'title', 'description', 'price')
+    class Meta:
+        model = MenuItem
+        fields = ('title', 'description', 'price')
