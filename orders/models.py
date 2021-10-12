@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Order(models.Model):
-    order = models.JSONField(max_length=255)
+    order = models.JSONField(null=True)
     name = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=255)
 

@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'django-restaurant-api-kattyeye.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'django-restaurant-api-kattyeye.herokuapp.com']
 
 
 # Application definition
@@ -64,6 +64,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'conf.urls'
 
 TEMPLATES = [
