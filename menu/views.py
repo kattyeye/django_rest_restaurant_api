@@ -7,3 +7,7 @@ from .serializers import MenuSerializer
 class MenuListAPIView(generics.ListCreateAPIView):
     queryset = MenuItem.objects.all()
     serializer_class = MenuSerializer
+
+class MenuDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = MenuItem.objects.all()
+    serializer_class = MenuSerializer

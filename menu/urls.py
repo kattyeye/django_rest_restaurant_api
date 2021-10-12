@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import MenuListAPIView
+from . import views
+
+app_name = 'menu'
 
 urlpatterns = [
-    path('', MenuListAPIView.as_view())
+    path('<int:pk>/', views.MenuDetailAPIView.as_view(), name="book_detail"),
+    path('', views.MenuListAPIView.as_view())
 ]
