@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     # local
     'api.apps.ApiConfig',
     'menu.apps.MenuConfig',
-    'orders.apps.OrdersConfig'
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [
