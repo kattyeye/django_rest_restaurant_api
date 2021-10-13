@@ -17,8 +17,11 @@ class MenuItem(models.Model):
         (BEVERAGES, 'Beverages'),
     ]
 
-    category = models.JSONField(
-        null=True, choices=CATEGORY_CHOICES, default=PIZZAS,
+    category = models.CharField(
+        null=True,
+        choices=CATEGORY_CHOICES,
+        default=PIZZAS,
+        max_length=25,
     )
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
